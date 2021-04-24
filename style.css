@@ -83,6 +83,8 @@ body {
 
 .main-container .game-container p {
   font-family: "Josefin Sans", sans-serif;
+  background-color: rgba(255, 255, 255, 0.856);
+  padding: 1rem 0;
   color: red;
   text-align: center;
   margin-top: 1rem;
