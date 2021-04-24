@@ -63,13 +63,20 @@ body {
 .heading h1 {
   font-family: "Dela Gothic One", cursive;
   color: #f18805;
-  font-size: 3ch;
+  font-size: 6ch;
 }
 
 /* -------------- MAIN GAME AREA ------------- */
 
 .main-container {
-  min-height: 79vh;
+  min-height: 60vh;
+}
+
+.main-container .game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .main-container .game-container h2 {
@@ -84,15 +91,16 @@ body {
 .main-container .game-container p {
   font-family: "Josefin Sans", sans-serif;
   background-color: rgba(255, 255, 255, 0.856);
-  padding: 1rem 0;
+  padding: 0.5rem;
   color: red;
   text-align: center;
   margin-top: 1rem;
+  border-radius: 0.5rem;
 }
 
 .main-container .game-container .game-box {
-  min-height: 70vh;
-  width: 50%;
+  width: 40%;
+  height: 650px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -100,9 +108,9 @@ body {
 
 .main-container .game-container .game-box > div {
   width: 100%;
-  height: 219.625px;
+  height: 215.328px;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 15ch;
+  font-size: 10ch;
   font-weight: 400;
   text-align: center;
   display: flex;
@@ -150,51 +158,12 @@ body {
 /* ---------- FOOTER STYLES ------------ */
 footer {
   font-family: "Josefin Sans", sans-serif;
-  min-height: 10vh;
+  min-height: 5vh;
   text-align: center;
-  padding: 2.3rem 0;
+  padding: 1rem 0;
   color: white;
 }
 
 footer p {
   font-size: 1.5ch;
-}
-
-@media screen and (max-width: 1200px) {
-  .game-intro {
-    min-height: 80vh;
-  }
-
-  .game-intro .container h1 {
-    font-size: 4ch;
-  }
-
-  .main-container .game-container h2 {
-    font-size: 3ch;
-  }
-
-  .main-container .game-container h2 {
-    font-size: 2ch;
-  }
-
-  .main-container .game-container .game-box {
-    width: 90%;
-  }
-
-  .main-container .game-container .game-box > div {
-    height: 148px;
-    font-size: 6ch;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .winner-container .container h1 {
-    font-size: 4ch;
-  }
-
-  footer p {
-    padding: 0 1rem;
-    font-size: 1.2ch;
-  }
 }
