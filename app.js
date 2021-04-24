@@ -66,6 +66,7 @@ const boxClicked = (e) => {
         e.target.innerText = currentPlayer;
         let currentPlayerText = document.querySelector(".current-player");
 
+
         // IF THE THE PLAYER AS WON THEN DO THIS OR CONT.. PLAYING AND UPDATING SPACES
         if(plyerHasWon()){
             gameHeading.classList.add("hide");
@@ -75,7 +76,7 @@ const boxClicked = (e) => {
             gameWinnerText.innerText = `${currentPlayer} Has WON 🎉🎉`;
             return;
         }
-        
+
         // SWITCHING THE CURRENT PLAYER
         currentPlayer = currentPlayer === X_text ? O_text : X_text;
 
@@ -85,20 +86,102 @@ const boxClicked = (e) => {
 };
 
 // FUNCTION TO CHECK CURRENT PLAYER WON OR NO
-const plyerHasWon = () => {
-    if(spaces[0] === currentPlayer || spaces[8] === currentPlayer || spaces[4] === currentPlayer || spaces[2] === currentPlayer){
-        console.log('gg');
-        if( spaces[1] === currentPlayer && spaces[2] === currentPlayer ||
-            spaces[1] === currentPlayer && spaces[7] === currentPlayer ||
-            spaces[3] === currentPlayer && spaces[6] === currentPlayer ||
-            spaces[3] === currentPlayer && spaces[5] === currentPlayer ||
-            spaces[4] === currentPlayer && spaces[6] === currentPlayer ||
-            spaces[4] === currentPlayer && spaces[8] === currentPlayer ||
-            spaces[5] === currentPlayer && spaces[2] === currentPlayer ||
-            spaces[7] === currentPlayer && spaces[6] === currentPlayer){
+let plyerHasWon = () => {
+    if(spaces[0] === currentPlayer){
+        if(spaces[1] === currentPlayer && spaces[2] === currentPlayer){
+            console.log('win horz from 0');
+            return true;
+        }
+        if(spaces[3] === currentPlayer && spaces[6] === currentPlayer){
+            console.log('win vert from 0');
+            return true;
+        }
+        if(spaces[4] === currentPlayer && spaces[8] === currentPlayer){
+            console.log('win cross from 0');
             return true;
         }
     }
+    if(spaces[8] === currentPlayer){
+        if(spaces[2] === currentPlayer && spaces[5] === currentPlayer) {
+            console.log('win vert from 8');
+            return true;
+        }
+        if(spaces[7] === currentPlayer && spaces[6] === currentPlayer){
+            console.log('win horz from 8');
+            return true;
+        }
+    }
+    if(spaces[4] === currentPlayer){
+        if(spaces[3] === currentPlayer && spaces[5] === currentPlayer){
+            console.log('win vert from 4');
+            return true;
+        }
+        if(spaces[1] === currentPlayer && spaces[7] === currentPlayer){
+            console.log('win vert from 4');
+            return true;
+        }
+    }
+    if(spaces[2] === currentPlayer){
+        if(spaces[4] === currentPlayer && spaces[6] === currentPlayer){
+            console.log('win cross from 2');
+            return true;
+        }
+    }
+};
+
+
+// if(noPlyerWon()){
+//     gameHeading.classList.add("hide");
+//     gameINTRO.classList.add("hide");
+//     mainGame.classList.add("hide");
+//     gameWinner.classList.remove("hide");
+//     gameWinnerText.innerText = `NO ONE HAS WON 😢 SO SAD!!`;
+//     return;
+// }
+
+let noPlyerWon = () => {
+
+    if(spaces[0] == currentPlayer){
+        if(spaces[1] !== currentPlayer && spaces[2] !== currentPlayer){
+            console.log('no win horz from 0');
+            return true;
+        }
+        if(spaces[3] !== currentPlayer && spaces[6] !== currentPlayer){
+            console.log('no win vert from 0');
+            return true;
+        }
+        if(spaces[4] !== currentPlayer && spaces[8] !== currentPlayer){
+            console.log('no win cross from 0');
+            return true;
+        }
+    }
+    if(spaces[8] == currentPlayer){
+        if(spaces[2] !== currentPlayer && spaces[5] !== currentPlayer) {
+            console.log('no win vert from 8');
+            return true;
+        }
+        if(spaces[7] !== currentPlayer && spaces[6] !== currentPlayer){
+            console.log('no win horz from 8');
+            return true;
+        }
+    }
+    if(spaces[4] == currentPlayer){
+        if(spaces[3] !== currentPlayer && spaces[5] !== currentPlayer){
+            console.log('no win vert from 4');
+            return true;
+        }
+        if(spaces[1] !== currentPlayer && spaces[7] !== currentPlayer){
+            console.log('no win vert from 4');
+            return true;
+        }
+    }
+    if(spaces[2] == currentPlayer){
+        if(spaces[4] !== currentPlayer && spaces[6] !== currentPlayer){
+            console.log('no win cross from 2');
+            return true;
+        }
+    }
+
 };
 
 
