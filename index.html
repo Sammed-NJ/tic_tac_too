@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FAVICON FILE -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>TIC TAC TOE | Game for Fun 😃</title>
+</head>
+<body>
+
+    <!-- GAME HEADING -->
+    <header class="heading" id="heading">
+        <h1>TIC TAC TOE</h1>
+
+    </header>
+
+    <!-- INFO OF GAME -->
+    <section class="game-intro " id="game-intro">
+        <div class="container">
+            <h1>TIC TAC TOE</h1>
+            <button type="submit" class="start-btn">START GAME</button>
+        </div>
+    </section>
+
+    <!-- MAIN SECTION -->
+    <section class="main-container" id="main-container">
+
+        <!-- GAME AREA -->
+        <div class="game-container" id="game-container">
+            <h2 class="current-player">X - turn</h2>
+            <div class="game-box" id="game-box">
+                <div class="box box-0" id="0"></div>
+                <div class="box box-1" id="1"></div>
+                <div class="box box-2" id="2"></div>
+                <div class="box box-3" id="3"></div>
+                <div class="box box-4" id="4"></div>
+                <div class="box box-5" id="5"></div>
+                <div class="box box-6" id="6"></div>
+                <div class="box box-7" id="7"></div>
+                <div class="box box-8" id="8"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- WINNER -->
+    <div class="winner-container" id="winner-container">
+        <div class="container">
+            <h1 class="ply-text"></h1>
+            <button type="reset" class="game-reset">RESTART</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="game-footer" id="game-footer">
+        <p>💪🏼 Designed & 💻 Developed by 🙋🏼‍♂️ Sammed NJ | TIC TAC TOE | Game for Fun 😄</p>
+    </footer>
+
+    <!-- CONNECT JS -->
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
