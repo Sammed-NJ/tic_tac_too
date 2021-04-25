@@ -77,7 +77,7 @@ const boxClicked = (e) => {
             return;
         }
         if(noPlyerWon()){
-            gameWinnerText.innerText = `NO More Moves Left SO ONE HAS WON 😢 SO SAD!!`;
+            gameWinnerText.innerText = `NO ONE HAS WON 😢 SO SAD!!`;
             gameHeading.classList.add("hide");
             gameINTRO.classList.add("hide");
             mainGame.classList.add("hide");
