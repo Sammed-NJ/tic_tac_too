@@ -88,16 +88,6 @@ body {
   margin-top: 0.5rem;
 }
 
-.main-container .game-container p {
-  font-family: "Josefin Sans", sans-serif;
-  background-color: rgba(255, 255, 255, 0.856);
-  padding: 0.5rem;
-  color: red;
-  text-align: center;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
-}
-
 .main-container .game-container .game-box {
   width: 40%;
   height: 650px;
@@ -134,7 +124,8 @@ body {
 .winner-container .container h1 {
   font-family: "Josefin Sans", sans-serif;
   color: white;
-  font-size: 10ch;
+  text-align: center;
+  font-size: 7ch;
 }
 
 .winner-container .container button {
