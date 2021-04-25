@@ -94,7 +94,7 @@ const boxClicked = (e) => {
     }
 };
 
-
+// FUNCTION IF CURRENT PLAYER NOT WON
 let noPlyerWon = () => {
 
     if(spaces[0, 1, 2] === currentPlayer && spaces[0, 4, 8] === currentPlayer && spaces[0, 3, 6] === currentPlayer){
@@ -111,45 +111,37 @@ let noPlyerWon = () => {
     }
 };
 
-// FUNCTION TO CHECK CURRENT PLAYER WON OR NO
+// FUNCTION IF CURRENT PLAYER WON
 let plyerHasWon = () => {
     if(spaces[0] === currentPlayer){
         if(spaces[1] === currentPlayer && spaces[2] === currentPlayer){
-            // console.log('win horz from 0');
             return true;
         }
         if(spaces[3] === currentPlayer && spaces[6] === currentPlayer){
-            // console.log('win vert from 0');
             return true;
         }
         if(spaces[4] === currentPlayer && spaces[8] === currentPlayer){
-            // console.log('win cross from 0');
             return true;
         }
     }
     if(spaces[8] === currentPlayer){
         if(spaces[2] === currentPlayer && spaces[5] === currentPlayer) {
-            // console.log('win vert from 8');
             return true;
         }
         if(spaces[7] === currentPlayer && spaces[6] === currentPlayer){
-            // console.log('win horz from 8');
             return true;
         }
     }
     if(spaces[4] === currentPlayer){
         if(spaces[3] === currentPlayer && spaces[5] === currentPlayer){
-            // console.log('win vert from 4');
             return true;
         }
         if(spaces[1] === currentPlayer && spaces[7] === currentPlayer){
-            // console.log('win vert from 4');
             return true;
         }
     }
     if(spaces[2] === currentPlayer){
         if(spaces[4] === currentPlayer && spaces[6] === currentPlayer){
-            // console.log('win cross from 2');
             return true;
         }
     }
